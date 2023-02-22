@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class, 'index']);
+Route::get('/', Homecontroller::class);
 
-Route::get('/about', [Pagecontroller::class, 'about']);
+Route::get('/about', Aboutcontroller::class);
 
-Route::get('/articles/{id}', [Pagecontroller::class, 'articles']);
+Route::get('/articles/{id}', ArticleController::class);
